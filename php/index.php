@@ -46,7 +46,7 @@ if (isset($_POST['submit']) && $_POST['submit'] === "submit-analyse"){
         <button class = "btn btn-valid" name = "submit" value = "submit-analyse">Analyse Picture</button>
     </form>
     <?php
-        // Display infos from picture
+        // Display infos from picture (I could have do a simple foreach rather than this "if" forest :p but I wanted to treat each result individualy)
         if (isset($message) && !empty($message))
             echo '<div id = "result" class = "standard-form"><p class = "info">'.$message.'</p></div>';
         if (isset($exif_array)){
